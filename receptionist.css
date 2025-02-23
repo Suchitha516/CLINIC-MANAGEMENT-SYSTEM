@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #5c6bc0;
+    --accent-color: #7986cb;
+    --background-color: #f5f7fa;
+    --form-background: #ffffff;
+    --text-dark: #2c3e50;
+    --text-light: #546e7a;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --input-border: #e0e0e0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.form-box {
+    width: 430px;
+    min-height: 600px; /* Increased height to accommodate all content */
+    position: relative;
+    background: var(--form-background);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    overflow: visible; /* Changed from hidden to visible */
+}
+
+.button-box {
+    width: 240px;
+    margin: 1rem auto 2rem;
+    position: relative;
+    border-radius: 30px;
+    background: var(--background-color);
+    padding: 5px;
+}
+
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+#btn {
+    top: 5px;
+    left: 5px;
+    position: absolute;
+    width: 120px;
+    height: calc(100% - 10px);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 25px;
+    transition: 0.5s ease;
+}
+
+.input-group-login,
+.input-group-register {
+    position: absolute;
+    width: calc(100% - 4rem); /* Adjusted width accounting for padding */
+    transition: 0.5s ease;
+    padding: 0 1rem;
+}
+
+.input-group-login {
+    top: 150px;
+}
+
+.input-group-register {
+    top: 120px;
+    height: auto; /* Allow content to determine height */
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 1px solid var(--input-border);
+    border-radius: 10px;
+    outline: none;
+    background: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.1);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px 30px;
+    margin: 15px 0;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+.check-box {
+    margin: 20px 5px 20px 0;
+    accent-color: var(--primary-color);
+}
+
+span {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    margin-left: 5px;
+    position: relative; /* Changed from absolute */
+    bottom: 0;
+}
+
+.input-group-login a {
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.input-group-login a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+#login {
+    left: 50px;
+}
+
+#register {
+    left: 450px;
+}
+
+@media (max-width: 480px) {
+    .form-box {
+        width: 100%;
+        padding: 1.5rem;
+        margin: 1rem;
+        min-height: 550px;
+    }
+    
+    .input-group-login,
+    .input-group-register {
+        width: calc(100% - 2rem);
+        padding: 0;
+    }
+    
+    .button-box {
+        width: 200px;
+    }
+}
